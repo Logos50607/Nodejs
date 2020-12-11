@@ -77,3 +77,11 @@ button{
     letter-spacing: 1px;
     color: #999;
 }
+
+.del{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

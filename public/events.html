@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="content">
+            <form id="add-events-form">
+                <input type="text" name="content" placeholder="輸入活動內容">
+                <input type="datetime-local" name="datetime" placeholder="輸入活動時間">
+                <button id="add_event"> 新增 </button> 
+            </form>
+            <table id="eve-table" cellpadding="10" border="1" width="100%">
+                　<tr>
+                　  <td>活動名稱</td>
+                　  <td>日期時間</td>
+                    <td>狀態</td>
+                　</tr>
+                <tr>
+                    <td id="loading" colspan="3" style="text-align: center;">資料載入中.....</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyD5LkqRiFX6IuTbfNo32X46AZ9482MsTQs",
+        authDomain: "nodejs-cde2a.firebaseapp.com",
+        databaseURL: "https://nodejs-cde2a-default-rtdb.firebaseio.com",
+        projectId: "nodejs-cde2a",
+        storageBucket: "nodejs-cde2a.appspot.com",
+        messagingSenderId: "838441464166",
+        appId: "1:838441464166:web:3d3ea33a571d04ff6bd8a7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    </script>
+    <script src="app_event.js"></script>
+</html>
